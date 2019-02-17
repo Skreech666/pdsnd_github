@@ -1,15 +1,12 @@
-### Date created
-Include the date you created this project and README file.
+### Exploring US Bikeshare Data
+The final version of `bikeshare.py` was created on the 22nd of January 2019 at 15:39.
 
-### Project Title
-Replace the Project Title
+### Summary
 
-### Description
-Describe what your project is about and what it does
 
 ### Files used
-Include the files used
+
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+
 
