@@ -1,3 +1,5 @@
+# remote repository location: https://github.com/Skreech666/pdsnd_github
+
 import time
 import pandas as pd
 import numpy as np
