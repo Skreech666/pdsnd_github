@@ -210,7 +210,7 @@ def user_stats(df, city):
 def see_raw(df):
     """Function to return rows of raw data where requested"""
     t = 0
-    u = 5
+    u = 4
     end = 0
     xx = input('Would you like see five rows of raw data? Enter yes: ')
     while end == 0:
