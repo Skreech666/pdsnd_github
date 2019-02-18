@@ -108,7 +108,12 @@ def load_data(city, month, day):
 
 
 def time_stats(df, city, month, day):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel.
+		Returns:
+				Month with the most trips
+				The day of the week most travelled on
+				Most common hour travel started on
+	"""
 
     print('\nCalculating The Most Frequent Times of Travel...\n\n')
     start_time = time.time()
@@ -117,13 +122,13 @@ def time_stats(df, city, month, day):
     monthtr = {1:'january', 2:'february', 3:'march', 4:'april', 5:'may', 6:'june'}
     if month == 'all':
         mt = monthtr[df['month'].mode()[0]]
-        print('The most common month travelled in is: {}.\n'.format(mt.capitalize()))
+        print('The month with the highest number of trips is: {}.\n'.format(mt.capitalize()))
     else:
         print('Month filter applied: {}.\n'.format(month.capitalize()))
         
     # display the most common day of week
     if day == 'all':
-        print('The most common day travelled on is: {}.\n'.format(df['day_of_week'].mode()[0]))
+        print('The day of the week most travelled on is: {}.\n'.format(df['day_of_week'].mode()[0]))
     else:
         print('Day filter applied: {}.\n'.format(day.capitalize()))
 
