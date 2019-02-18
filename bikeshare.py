@@ -204,7 +204,7 @@ def user_stats(df, city):
         # Display earliest, most recent, and most common year of birth
         df_u =  df['User Type'] == 'Subscriber'
         df_user = df[df_u].copy()
-        print('The Earliest year of birth is {}.\n\n The most recent year of birth is {}.\n\n The most common year of birth is {}.\n'.format(int(df_user['Birth Year'].min()), int(df_user['Birth Year'].max()), int(df_user['Birth Year'].mode()[0])))
+        print('The Earliest year of birth is {}.\n\nThe most recent year of birth is {}.\n\nThe most common year of birth is {}.\n'.format(int(df_user['Birth Year'].min()), int(df_user['Birth Year'].max()), int(df_user['Birth Year'].mode()[0])))
     else:
         print('No Gender or Birth Year data available.\n')
         
