@@ -110,7 +110,12 @@ def load_data(city, month, day):
 
 
 def time_stats(df, city, month, day):
-    """Displays statistics on the most frequent times of travel."""
+    """Displays statistics on the most frequent times of travel.
+		Returns:
+				Month with the most trips
+				The day of the week most travelled on
+				Most common hour travel started on
+	"""
 
     print('\nCalculating The Most Frequent Times of Travel...\n\n')
     start_time = time.time()
@@ -119,13 +124,13 @@ def time_stats(df, city, month, day):
     monthtr = {1:'january', 2:'february', 3:'march', 4:'april', 5:'may', 6:'june'}
     if month == 'all':
         mt = monthtr[df['month'].mode()[0]]
-        print('The most common month travelled in is: {}.\n'.format(mt.capitalize()))
+        print('The month with the highest number of trips is: {}.\n'.format(mt.capitalize()))
     else:
         print('Month filter applied: {}.\n'.format(month.capitalize()))
         
     # display the most common day of week
     if day == 'all':
-        print('The most common day travelled on is: {}.\n'.format(df['day_of_week'].mode()[0]))
+        print('The day of the week most travelled on is: {}.\n'.format(df['day_of_week'].mode()[0]))
     else:
         print('Day filter applied: {}.\n'.format(day.capitalize()))
 
@@ -201,7 +206,7 @@ def user_stats(df, city):
         # Display earliest, most recent, and most common year of birth
         df_u =  df['User Type'] == 'Subscriber'
         df_user = df[df_u].copy()
-        print('The Earliest year of birth is {}.\n\n The most recent year of birth is {}.\n\n The most common year of birth is {}.\n'.format(int(df_user['Birth Year'].min()), int(df_user['Birth Year'].max()), int(df_user['Birth Year'].mode()[0])))
+        print('The Earliest year of birth is {}.\n\nThe most recent year of birth is {}.\n\nThe most common year of birth is {}.\n'.format(int(df_user['Birth Year'].min()), int(df_user['Birth Year'].max()), int(df_user['Birth Year'].mode()[0])))
     else:
         print('No Gender or Birth Year data available.\n')
         
@@ -212,7 +217,7 @@ def user_stats(df, city):
 def see_raw(df):
     """Function to return rows of raw data where requested"""
     t = 0
-    u = 5
+    u = 4
     end = 0
     xx = input('Would you like see five rows of raw data? Enter yes: ')
     while end == 0:
