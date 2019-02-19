@@ -13,6 +13,9 @@ An option is given to see a sample of the data at the end of the script.
 
 **Note:** _.csv files are not stored in the github repository_
 
+### Minimum Requirements
+nil
+
 ### Credits
 https://dillinger.io/ - For previewing markdown
 
