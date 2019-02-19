@@ -16,3 +16,7 @@ An option is given to see a sample of the data at the end of the script.
 ### Credits
 https://dillinger.io/ - For previewing markdown
 
+### Version History
+V0.1 Inital completed version 22nd of January 2019 at 15:39
+
+
